@@ -1,12 +1,23 @@
 import sys
 
-def main(args):
+def main(money_str):
+    """
+    Prints out the minimum number of coins to make a dollar amount, i.e $4.42
+
+    Args:
+        money_str: A string of the form $X.YZ where X <= 100, and Y and Z are both integers 0 <= x <= 9
+
+    Returns:
+        None, has side effect of printing
+
+    Raises:
+        AssertationError if input is not valid, may also exit
+    """
     currency = [("dollar", "dollars", 100), ("quarter", "quarters", 25), ("dime", "dimes", 10), ("nickel", "nickels" , 5), ("penny", "pennies", 1)]
-    if len(args) != 1:
+    if len(money_str) != 1:
         print("Exactly one argument is required: usage `python problem1.py \$X.YZ`")
-        
         exit(-1)
-    money = args[0]
+    money = money_str[0]
     assert money[0] == '$', "\nThe input should start with a dollar sign. Make sure to escape this if on linux."
     dollars = money[1:] # remove $
     dollars, cents = dollars.split('.')
@@ -26,4 +37,4 @@ def main(args):
             current += count
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main(sys.argv[1:][0])

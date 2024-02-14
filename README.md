@@ -11,3 +11,5 @@
 - https://brand.ncssm.edu/fonts-and-colors
 - https://stackoverflow.com/questions/15843391/div-height-set-as-percentage-of-screen
 - https://dequeuniversity.com/rules/axe/4.4/color-contrast
+- https://www.w3schools.com/jsref/jsref_split.asp
+- https://stackoverflow.com/questions/1374126/how-to-extend-an-existing-javascript-array-with-another-array-without-creating

@@ -1,31 +1,40 @@
-var arguments = process.argv;
+let arguments = process.argv;
 if (arguments.length < 3) {
     console.log('ERROR: You must provide at least one string');
     return;
 }
 arguments = arguments.slice(2); 
+split_arguments = []
+for (let arg of arguments) {
+    // woah the "spead" operator is really neat
+    // split returns an array and ... (functionally) appends each element to split_arguments without another for loop 
+    // probably equal to concat? this avoids a copy which totally doesn't matter here
+    split_arguments.push(...arg.split(" "));
+}
+
+// console.log(split_arguments);
+// has key of lowercase word, value of [original case, number of occurances]
 const word_map = new Map();
 
-arguments.forEach((word) => {
-    // so I am considering what to do in the case where you have '“' or '”' in the word
-    // in your examples, 'Panda”' matched with panda despite the quotes
-    // this seems to go against 'A word is indicated by a sequence of characters separated by whitespace.'
-    // as ” is a character and not whitespace so it should be part of the word
+for (let word of split_arguments) {
+    // console.log(word);
+    word_lower = word.toLowerCase();
 
-    // I will follow the test cases and assume that the quotes are not part of the word
-    word = word.toLowerCase();
-    word = word.replace(/[^a-zA-Z]/g, '');
-
-    if (word_map.has(word)) {
-        word_map.set(word, word_map.get(word) + 1);
-    } else {
-        word_map.set(word, 1);
+    // only want to update occurances, not original case of word after we find a new word
+    if (!word_map.has(word_lower)) {
+        word_map.set(word_lower, [word, 1]);
+    } 
+    else {
+        updated_count = word_map.get(word_lower);
+        updated_count[1] += 1
+        word_map.set(word_lower, updated_count)
     }
-});
-
-word_map.forEach((value, key) => {
-    if (value > 1) {
-        console.log(key);
-    }
-});
+}
 //console.log(word_map);
+
+for (let kv of word_map.entries()) {
+    occurances = kv[1];
+    if (occurances[1] > 1) {
+        console.log(occurances[0]);
+    }
+}
