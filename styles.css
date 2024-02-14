@@ -1,0 +1,19 @@
+body {
+  background: #346094;
+} 
+
+div.form
+{
+    text-align: center;
+    color: #b2b1b1;
+}
+
+
+input {
+  background-color: #8a8a8d;
+  color: #000;
+  font-size: xxx-large;
+  font-style: bold;
+  width: 80vw;
+  height: 23.33vh;
+}
