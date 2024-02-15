@@ -1,0 +1,34 @@
+/*The rectangle that holds all the choices*/
+#maincontainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid black 1px;
+    width: 80vw;
+    height: 70%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*Main background*/
+body{
+    background-color: gray;
+}
+
+/*The background of the form*/
+div{
+    background-color: blue;
+}
+
+/*The text inside the form*/
+label{
+    color: #FFFFFF;
+    padding: 1%;
+}
+
+input{
+    padding: 1%;
+}
