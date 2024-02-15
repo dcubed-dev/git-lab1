@@ -1,1 +1,12 @@
-# Git Lab 1
+# HUGH GLENN
+<ins>**RESOURCES**<ins>
+
+-Saksham
+
+-StackOverflow
+
+-W3 Schools
+
+-Elyz Katz
+
+-GeeksforGeeks
