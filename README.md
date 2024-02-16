@@ -1,1 +1,4 @@
-# Git Lab 1
+# Eric Apostal
+
+**<u> RESOURCES </u>**
+- 
