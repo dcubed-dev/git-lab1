@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {  
+    background-color:#346094;
+}
+
+form {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    background-color: #f4c300;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+}
