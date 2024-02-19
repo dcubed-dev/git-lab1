@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Problem 3: User Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="user-form">
+            <label for="username">Username:</label>
+            <input id="username" ><br><br>
+            
+            <label for="password">Password:</label>
+            <input id="password" ><br><br>
+            
+            <label for="fav-color">Favorite Color:</label>
+            <input type="color" id="fav-color"  onchange="changeColor()"><br><br>
+            
+            <input id="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function changeColor() {
+            var colorPicker = document.getElementById("fav-color");
+            var selectedColor = colorPicker.value;
+            colorPicker.style.backgroundColor = selectedColor; 
+        }
+    </script>
+</body>
+</html>
