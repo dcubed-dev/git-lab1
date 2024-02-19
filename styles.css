@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(57, 146, 235);
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.user-form {
+    width: 80%;
+    height: 70%;
+    background-color: rgb(161, 161, 161);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#username,
+#password,
+#fav-color,
+#submit {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#submit {
+    background-color: rgb(40, 78, 154);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: rgb(139, 199, 212);
+}
