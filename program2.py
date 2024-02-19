@@ -2,6 +2,16 @@ import sys
 
 def duplicates(strings):
 
+    """
+    finds and prints duplicate words in a list of strings.
+
+    Arguments:
+        strings (list): a list of strings provided by the user to check for duplicates
+
+    Returns:
+        none
+    """
+
     #check if strings is empty 
     if not strings:
         print("ERROR: You must provide at least one string")
@@ -31,12 +41,6 @@ def duplicates(strings):
         if len(word_list) > 1:
             duplicates.update(word_list)
 
-    # #If word is in duplicates it will print
-    # for string in strings:
-    #     for word in string.split():
-    #         if word.lower() in duplicates:
-    #             print(word)
-    #             duplicates.remove(word.lower())
 
     for word in duplicates:
         print(word)

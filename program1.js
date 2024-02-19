@@ -1,3 +1,10 @@
+
+/**
+ * Checks the input string that represents some amount of money
+ * must be in the format '$X.YZ' where X is the dollar amount and YZ represents cents.
+ * @param {string} input - The input string representing the monetary amount.
+ */
+
 function processInput(input) {
     // make sure the input is in the right format
     let regex = /^\$([1-9]\d*|0)(\.\d{2})?$/;
@@ -18,6 +25,12 @@ function processInput(input) {
     
     //cast both amounts to int and get the total amount of cents
     let total = parseInt(amtdollars) * 100 + parseInt(cents);
+
+    /**
+     * sorts the total cents into seperate denominations.
+     * @param {number} totalCents - total amount in cents.
+     * @returns {Object} an object containing the counts of dollars, quarters, dimes, nickels, and pennies.
+     */
 
     function sort(totalcents) {
         let dollars = Math.floor(totalcents / 100);
